@@ -1,11 +1,11 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, Navigate } from 'react-router-dom';
 import React from 'react';
 import App from '../App';
 import PostsList from '../components/Posts';
 import Albums from '../components/Albums';
 import Photos from '../components/Photos';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <Navigate to={"/users"} />
