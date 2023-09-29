@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "webpack serve --config webpack.config.js --open",
     "start": "webpack serve --open",
     "build": "webpack --config webpack.config.js",
