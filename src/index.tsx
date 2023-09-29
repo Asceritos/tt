@@ -1,19 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { RouterProvider } from 'react-router-dom';
+import './index.scss';
+import './styles/styles.scss';
+import { Spinner } from './elements/Spinner';
+import { router } from './router';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <RouterProvider
+      router={router}
+      fallbackElement={<Spinner />}
+    />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// @ts-ignore
+if (module && module.hot) {
+  // @ts-ignore
+  module.hot.accept()
+}

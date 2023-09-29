@@ -1,0 +1,43 @@
+@import '../../../styles/utils/variables.scss';
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  width: 700px;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  &__title {
+
+  }
+
+  &__body {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+    &--title {
+      margin: 0;
+      margin-bottom: 2px;
+    }
+  }
+
+  &__open-comments {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: flex-end;
+    border: none;
+    color: $color-white;
+    background-color: #80baf8;
+
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

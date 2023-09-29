@@ -1,0 +1,37 @@
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &--active {
+    background-color: #d9d769;
+  }
+
+  &__link {
+    color: #000;
+  }
+
+  &__title {
+    margin: 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    margin: 0;
+  }
+
+  &::after {
+    content: '';
+    margin-top: 15px;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+  }
+}
